@@ -171,8 +171,8 @@ def main():
                     moveMade = True
                     gameOver = False
         # ChessAI turn
-        if not gameOver and not humanTurn and motlan:
-            move = ChessAI.findBestMoveMinMax(gameState, validMoves)
+        if not gameOver and not humanTurn:
+            move = ChessAI.findBestMove(gameState, validMoves)
             if move is None:
                 move = ChessAI.findRandomMove(validMoves)
             gameState.makeMove(move)
