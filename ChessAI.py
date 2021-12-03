@@ -103,7 +103,7 @@ def findBestMove(gs, validMoves):
         gs.undoMove()
     return bestPlayerMove
 
-def findBestMove(gs, validMoves):
+def findBestNegaMaxMove(gs, validMoves):
     global nextMove
     nextMove = None
     random.shuffle(validMoves)

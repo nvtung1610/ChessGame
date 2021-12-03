@@ -172,7 +172,7 @@ def main():
                     gameOver = False
         # ChessAI turn
         if not gameOver and not humanTurn:
-            move = ChessAI.findBestMove(gameState, validMoves)
+            move = ChessAI.findBestNegaMaxMove(gameState, validMoves)
             if move is None:
                 move = ChessAI.findRandomMove(validMoves)
             gameState.makeMove(move)
